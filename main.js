@@ -5,24 +5,18 @@ pic.setAttribute('alt', 'User Avatar');
 let bio = document.querySelector('p.user-info__description');
 let link;
 
-let searchName = window.location.search;
-let searchParams = new URLSearchParams(searchName);
+let searchParams = new URLSearchParams(window.location.search);
 let login = searchParams.get('username');
-
-let user = {};
 
 let apiUrl = 'https://api.github.com/users/' + login;
 fetch(apiUrl)
     .then(response => response.json())
-    .then(json => { 
-        user = Object.assign({}, json);
-        return user;})
     .then(user => { 
         if (user.name) {
             title.innerHTML = user.name;
             name.innerHTML = user.name;
             pic.setAttribute('src', user.avatar_url);
-            user.bio == null ? 
+            user.bio === null ? 
             bio.innerHTML = 'No bio provided.' + '\n' :
             bio.innerHTML = user.bio + '\n';
             link = document.createElement('a');
