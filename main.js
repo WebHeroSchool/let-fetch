@@ -24,7 +24,7 @@ fetch(apiUrl)
             link = document.createElement('a');
             link.innerHTML = 'Show profile';
             link.setAttribute('href', user.html_url);
-            div.insertBefore(pic, bio);
+            div.insertBefore(pic, div.children[0]);
 
 
             pic = document.createElement('img');
