@@ -19,18 +19,18 @@ fetch(apiUrl)
             bio.innerHTML = 'No bio provided.' + '\n' :
             bio.innerHTML = user.bio + '\n';
             
-            pic = document.createElement('img');
-            pic.className = 'user-info__pic';
-            pic.setAttribute('alt', 'User Avatar');
-            pic.setAttribute('src', user.avatar_url);
-            console.log(pic);
-            console.log(bio);
-            document.body.insertBefore(pic, bio);
             
             link = document.createElement('a');
             link.innerHTML = 'Show profile';
             link.setAttribute('href', user.html_url);
             bio.appendChild(link);
+
+            
+            pic = document.createElement('img');
+            pic.className = 'user-info__pic';
+            pic.setAttribute('alt', 'User Avatar');
+            pic.setAttribute('src', user.avatar_url);
+            bio.appendChild(pic);
         }
     })
     .catch(error => console.log(error));
