@@ -18,10 +18,11 @@ fetch(apiUrl)
             bio.innerHTML = user.bio + '\n';
             
             let pic = document.createElement('img');
-            document.body.insertBefore(pic, bio);
             pic.className = 'img.user-info__pic';
             pic.setAttribute('alt', 'User Avatar');
             pic.setAttribute('src', user.avatar_url);
+            console.log(pic);
+            document.body.insertBefore(pic, bio);
             
             let link = document.createElement('a');
             link.innerHTML = 'Show profile';
