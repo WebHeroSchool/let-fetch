@@ -1,6 +1,7 @@
 let title = document.head.children[1];
 let name = document.querySelector('h1.user__name');
-let bio = document.querySelector('p.user-info__description');
+let div = document.querySelector('div.user-info');
+let bio = document.querySelector('p.user-info__description');1
 let pic;
 let link;
 
@@ -23,9 +24,9 @@ fetch(apiUrl)
             link = document.createElement('a');
             link.innerHTML = 'Show profile';
             link.setAttribute('href', user.html_url);
-            bio.appendChild(link);
+            div.insertBefore(pic, bio);
 
-            
+
             pic = document.createElement('img');
             pic.className = 'user-info__pic';
             pic.setAttribute('alt', 'User Avatar');
