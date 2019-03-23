@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body  {
+    font-family: Montserrat;
+    background: 
+    url('https://s3.amazonaws.com/east-cut/wp-content/uploads/2014/03/Elegant_Background-2.jpg');
+}
+
+.user  {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info__pic  {
+    height: auto;
+    border: 3px outset #f4eab5;
+
+}
+
+.user-info__description  {
+    padding: 10px;
+    line-height: 1.5em;
+    text-align: justify;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
